@@ -1,3 +1,10 @@
 h1{
     color: blueviolet;
 }
+
+.large-text{
+    font-size: 1.5em;
+}
+.text{
+    text-align: center;
+}

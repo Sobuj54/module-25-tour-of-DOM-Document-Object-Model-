@@ -42,7 +42,7 @@
                 <li>Grapes</li>
         </ul>
         </section>
-        <section>
+        <section id="places"  class="text">
             <h1 id="places-title">places i like to visit</h1>
             <ul>
                 <li class="place">sundarban</li>
@@ -54,6 +54,7 @@
     </main>
     <!-- connection external js file -->
     <script src="js/DOM.js"></script>
+    <script src="js/styleInJs.js"></script>
     <!-- we can also write js code inside html like shown below -->
     <script>
         // getting elements by tag name.
@@ -85,13 +86,13 @@
         // in querselector we need to add . for class and add # for id else it will not work
         const queryAll = document.querySelectorAll('.fruit-collection');
         for(const query of queryAll){
-            console.log(query.innerText);
+            //console.log(query.innerText);
         } 
         // --------------
         // querySelector
         // it will return only one value
         const queryOne = document.querySelector('.fruit-collection li');
-        console.log(queryOne.innerText);
+        //console.log(queryOne.innerText);
     </script>
 </body>
 </html>
