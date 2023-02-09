@@ -12,11 +12,18 @@
         li{
             color: cadetblue;
         }
+        #fruits-title{
+            color: coral;
+        }
+        .place{
+            color: brown;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to DOM</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus officiis reiciendis atque saepe consequatur odio eveniet. Eligendi fugit vero, obcaecati, exercitationem repellat adipisci commodi, eaque itaque rem accusamus beatae totam.</p>
     </header>
     <main>
         <h1>Awesome DOM</h1>
@@ -24,23 +31,51 @@
             <li>jalali set</li>
             <li>bonobash</li>
         </ul>
+        <section>
+            <h1 id="fruits-title">fruits i like</h1>
+            <ul>
+                <li>Banana</li>
+                <li>Apple</li>
+                <li>Grapes</li>
+        </ul>
+        </section>
+        <section>
+            <h1 id="places-title">places i like to visit</h1>
+            <ul>
+                <li class="place">sundarban</li>
+                <li class="place">bandarban</li>
+                <li class="place">katabon</li>
+                <li>shalbon</li>
+            </ul>
+        </section>
     </main>
     <!-- connection external js file -->
     <script src="js/DOM.js"></script>
     <!-- we can also write js code inside html like shown below -->
     <script>
+        // getting elements by tag name.
         const listCollection = document.getElementsByTagName('li');
         // console.log(listCollection);
         // looping through document 
         for(const li of listCollection){
             // here i used li.innertext only to get texts that are inside li tag..if we used onl li then we would have gotten text along with tag.
-            console.log(li.innerText);
+            // console.log(li.innerText);
         }
 
         const headingCollection = document.getElementsByTagName('h1');
         for(const h1 of headingCollection){
-            console.log(h1.innerText);
+            // console.log(h1.innerText);
         }
+        // ------------
+        // get elements by class
+        const classCollection = document.getElementsByClassName('place');
+        for(const classes of classCollection){
+            console.log(classes.innerText);
+        }
+        // ---------------
+        // changing something inside html using js
+        const fruitTitle = document.getElementById('fruits-title');
+        fruitTitle.innerText = "i like these fruits."
     </script>
 </body>
 </html>
