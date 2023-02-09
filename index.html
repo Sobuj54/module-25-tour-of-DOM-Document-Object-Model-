@@ -29,7 +29,18 @@
     <script src="js/DOM.js"></script>
     <!-- we can also write js code inside html like shown below -->
     <script>
-        console.log('i am inside html');
+        const listCollection = document.getElementsByTagName('li');
+        // console.log(listCollection);
+        // looping through document 
+        for(const li of listCollection){
+            // here i used li.innertext only to get texts that are inside li tag..if we used onl li then we would have gotten text along with tag.
+            console.log(li.innerText);
+        }
+
+        const headingCollection = document.getElementsByTagName('h1');
+        for(const h1 of headingCollection){
+            console.log(h1.innerText);
+        }
     </script>
 </body>
 </html>
