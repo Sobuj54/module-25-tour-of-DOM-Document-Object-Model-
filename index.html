@@ -9,8 +9,11 @@
     <title>Tour of DOM</title>
     <!-- adding css inside html -->
     <style>
-        li{
+         li{
             color: cadetblue;
+        }
+        .fruit-collection li{
+            color:rebeccapurple;
         }
         #fruits-title{
             color: coral;
@@ -31,7 +34,7 @@
             <li>jalali set</li>
             <li>bonobash</li>
         </ul>
-        <section>
+        <section class="fruit-collection">
             <h1 id="fruits-title">fruits i like</h1>
             <ul>
                 <li>Banana</li>
@@ -70,12 +73,25 @@
         // get elements by class
         const classCollection = document.getElementsByClassName('place');
         for(const classes of classCollection){
-            console.log(classes.innerText);
+            // console.log(classes.innerText);
         }
         // ---------------
         // changing something inside html using js
         const fruitTitle = document.getElementById('fruits-title');
         fruitTitle.innerText = "i like these fruits."
+
+        // -----------
+        // querySelectorAll will return all the values
+        // in querselector we need to add . for class and add # for id else it will not work
+        const queryAll = document.querySelectorAll('.fruit-collection');
+        for(const query of queryAll){
+            console.log(query.innerText);
+        } 
+        // --------------
+        // querySelector
+        // it will return only one value
+        const queryOne = document.querySelector('.fruit-collection li');
+        console.log(queryOne.innerText);
     </script>
 </body>
 </html>
