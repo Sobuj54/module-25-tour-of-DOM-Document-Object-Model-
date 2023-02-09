@@ -35,3 +35,16 @@ ul.append(li3);
 section.append(ul);
 // 3.add the child
 mainContainer.append(section);
+
+// ---------------------->
+// adding section in different method..using innerHtml
+const sectionDress = document.createElement('section');
+sectionDress.innerHTML = `
+<h1>Dresses</h2>
+<ul>
+<li>t-shirt</li>
+<li>pant</li>
+<li>panjabi</li>
+</ul>
+`
+mainContainer.append(sectionDress);
